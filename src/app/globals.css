@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 淺色模式：預設 */
+:root {
+  --background: #fff8f2;       /* 奶油白 */
+  --foreground: #171717;       /* 黑字 */
+}
+
+/* 深色模式：自動套用 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ffffff;     /* 白字 */
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
